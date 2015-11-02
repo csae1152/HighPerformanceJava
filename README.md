@@ -12,3 +12,10 @@ GARBAGE COLLECTION TUNING (HOTSPOT JVM)
 - Throughput Tuning 
 - Pause Tuning 
 - G1 Tuning
+
+Most common java programming errors:
+====================================
+
+1. NullPointerException
+2. Race conditions
+3. Leaks
