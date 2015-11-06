@@ -19,3 +19,8 @@ Most common java programming errors:
 1. NullPointerException
 2. Race conditions
 3. Leaks
+
+How to run junit tests integrated in jenkins
+============================================
+
+1. How to simulate a production ready database
