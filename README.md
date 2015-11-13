@@ -20,7 +20,10 @@ Most common java programming errors:
 2. Race conditions
 3. Leaks
 
-How to run junit tests integrated in jenkins
+Java 8 and performance issues
 ============================================
 
-1. How to simulate a production ready database
+1. Lambda expressions 
+
+New introduced lambdas in Java 8 have a few performance advantages over anonymous inner classes which you had to use before Java 8 to "mimize" lamdas in Java.
+
