@@ -13,6 +13,10 @@ GARBAGE COLLECTION TUNING (HOTSPOT JVM)
 - Pause Tuning 
 - G1 Tuning
 
+Don't fear Parallel Scavenge
+
+Today we cover how Parallel GC works. Specifically this is the combination of running a Parallel Scavenge collector over Eden and the Parallel Mark and Sweep collector over the Tenured generation. You can get this option by passing in -XX:+UseParallelOldGC though its the default on certain machine types.
+
 Most common java programming errors:
 ====================================
 
@@ -33,4 +37,5 @@ Elasticsearch, Redis and CouchDB in the view of low latency
 2. Is Redis In-Memory by default ?
 3. CouchDB indexes are stored/cached from disk or memory ?
 4. Dedicated CPU's and complex elasticsearch queries ?
+
 
