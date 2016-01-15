@@ -17,6 +17,13 @@ Don't fear Parallel Scavenge
 
 Today we cover how Parallel GC works. Specifically this is the combination of running a Parallel Scavenge collector over Eden and the Parallel Mark and Sweep collector over the Tenured generation. You can get this option by passing in -XX:+UseParallelOldGC though its the default on certain machine types.
 
+Eden and Survivor Spaces
+========================
+
+In the parallel scavenge collector eden and survivor spaces are collected using an approach known as Hemispheric GC. Objects are initially allocated in Eden, once Eden is close to full 1 a gc of the Eden space is triggered. This identifies live objects and copies them to the active Survivor Space2. It then treats the whole Eden space as a free, contiguous, block of memory which it can allocate into again.
+
+In this case the allocation process ends up being like cutting a piece of cheddar. Each chunk gets sliced off contiguously and then the slice next to is the next to be 'eaten'. This has the upside that allocation merely requires pointer addition.
+
 Most common java programming errors:
 ====================================
 
